@@ -1,4 +1,5 @@
 import streamlit as st
+from maze import maze
 
 def what_is_a_neurotransmitter():
     st.subheader(":blue[NEURO]*DASH*")
@@ -29,7 +30,27 @@ def how_do_they_work():
             *action potential* reaches the end of 
              of a neuron, it triggers the release of 
               neurotransmitter from specialized structures called 
-               synaptic vesicles """)
-    
+               synaptic vesicles.""")
+
+def nates_calling():
+    st.header("GAME ON")
+    st.write("Hello, my name is **Neuron Nate**.")
+    name = st.text_input("May I know your name please...")
+    st.caption("Your name isn't saved across game sessions.")
+    if name:
+        st.info(f"""
+        Okay **{name.capitalize()}**, 
+        help the main character, Neuron Nate, 
+        navigate through the brain and collect 
+        neurotransmitters while avoiding obstacles
+        and challenges.
+
+        """)
+        if st.button("Yes, I'm In!"):
+            st.info(maze)
+
+
 what_is_a_neurotransmitter()
 how_do_they_work()
+nates_calling()
+
