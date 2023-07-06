@@ -1,6 +1,6 @@
 import streamlit as st
 from maze import maze
-
+from dopamine import dopamine
 def what_is_a_neurotransmitter():
     st.subheader(":blue[NEURO]*DASH*")
     st.info("""A neurotransmitter is a **chemical messanger**
@@ -26,6 +26,8 @@ So, next time you're amazed by your brain's incredible abilities, remember to gi
     nerve cells.""")
 
 def how_do_they_work():
+    
+    st.subheader("**HSAD**:blue[_ORUEN_]")
     st.info("""When an electrical signal, called an
             *action potential* reaches the end of 
              of a neuron, it triggers the release of 
@@ -46,11 +48,29 @@ def nates_calling():
         and challenges.
 
         """)
-        if st.button("Yes, I'm In!"):
-            st.info(maze)
+        if st.button("**Yes**, I'm In!"):
+            st.balloons()
+            st.caption("**Neuron Nate**")
+            with st.expander("*:blue[Discover the brain maze!]*"):
 
+                st.info(maze)
+            
+            st.caption("**Neuron Nate:**")
+            st.info("""
+            First off, meet **dopamine**.
+            Dopamine is a neurotransmitter, which is a chemical messenger in the brain. 
+            It plays a crucial role in various brain functions, including motivation, reward, pleasure, movement, and cognition.  
+            
+            """)
+            st.image("./dop.jpg", width=300)
+            with st.expander("*:blue[Discover Dopamine!]*"):
 
-what_is_a_neurotransmitter()
-how_do_they_work()
+                st.info(dopamine)
+c1, c2 = st.columns(2)
+
+with c1:
+    what_is_a_neurotransmitter()
+with c2:
+    how_do_they_work()
 nates_calling()
 
