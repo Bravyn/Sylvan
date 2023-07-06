@@ -42,7 +42,8 @@ Dopamine is involved in executive functions such as attention, cognitive control
         st.info("""
  Dopamine influences mood and emotional well-being. Imbalances in dopamine levels have been associated with various psychiatric disorders, including depression, bipolar disorder, and addiction. Proper dopamine regulation is essential for maintaining stable mood states.        """
         )
-        
+
+   
     st.caption("""It's important to note that dopamine's functions are complex and interconnected with other neurotransmitters and brain systems. Its precise effects can vary depending on the specific brain regions involved and the context in which it is released.""")
 
     
